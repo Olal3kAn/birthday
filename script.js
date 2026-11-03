@@ -34,8 +34,8 @@ function updateCountdown() {
     "0",
   );
 }
-
-const countdownTimer = null;
+updateCountdown();
+const countdownTimer = setInterval(updateCountdown, 1000);
 
 candles.forEach((candle) =>
   candle.addEventListener("click", () => {
@@ -55,6 +55,7 @@ enterButton.addEventListener("click", () => {
   launchConfetti(120);
 });
 
+// Confetti celebration
 function launchConfetti(amount = 60) {
   const colors = [
     "#d6b66c",
